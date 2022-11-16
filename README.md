@@ -27,3 +27,7 @@ ls *.sorted.bam | parallel "bedtools intersect -v -a {} -b input.bed > {.).new.b
 # R trick Subset 23 chr from dataframe
 
 subset(esc.bed, grepl("^chr[0-9]{1,2}$|^chr[XY]$", seqnames))
+
+# seperate columns by tab
+
+awk {'print $1"\t"$2"\t"$3'} data.txt
