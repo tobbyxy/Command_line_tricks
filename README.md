@@ -23,3 +23,7 @@ ls *.sorted.bam | parallel "bedtools intersect -v -a {} -b input.bed > {.).new.b
 
 {} means the list from ls
 {.} will replace the suffix .sorted.bam with .new.bam
+
+# R trick Subset 23 chr from dataframe
+
+subset(esc.bed, grepl("^chr[0-9]{1,2}$|^chr[XY]$", seqnames))
