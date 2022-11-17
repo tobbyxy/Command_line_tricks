@@ -31,3 +31,7 @@ subset(esc.bed, grepl("^chr[0-9]{1,2}$|^chr[XY]$", seqnames))
 # seperate columns by tab
 
 awk {'print $1"\t"$2"\t"$3'} data.txt
+
+# great resource for learning command line manipulations
+
+https://learnbyexample.gitbooks.io/command-line-text-processing/content/gnu_awk.html
