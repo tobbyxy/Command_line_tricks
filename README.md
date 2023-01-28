@@ -35,3 +35,8 @@ awk {'print $1"\t"$2"\t"$3'} data.txt
 # great resource for learning command line manipulations
 
 https://learnbyexample.gitbooks.io/command-line-text-processing/content/gnu_awk.html
+
+#use the mv command to rename file
+
+mv "$file" "${file/annotated_peaks/annotated_peaks}"
+
