@@ -36,7 +36,13 @@ awk {'print $1"\t"$2"\t"$3'} data.txt
 
 https://learnbyexample.gitbooks.io/command-line-text-processing/content/gnu_awk.html
 
-#use the mv command to rename file
+# use the mv command to rename file
 
 mv "$file" "${file/annotated_peaks/annotated_peaks}"
+
+# create 3 column bed file with awk
+
+for file in annotated_peaks*; do
+  tail -n +2 $file | cut -f1-3 -d$'\t' > "${file}_columns.txt"
+done
 
