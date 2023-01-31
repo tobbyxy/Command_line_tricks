@@ -46,3 +46,6 @@ for file in annotated_peaks*; do
   tail -n +2 $file | cut -f1-3 -d$'\t' > "${file}_columns.txt"
 done
 
+# remove last 4 lines with awk
+
+awk 'NR > 4' fimo.tsv > file.tsv
