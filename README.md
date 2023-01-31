@@ -48,4 +48,4 @@ done
 
 # remove last 4 lines with awk
 
-awk 'NR > 4' fimo.tsv > file.tsv
+sed -i -n -e :a -e '1,4!{P;N;D;};N;ba' file.txt
