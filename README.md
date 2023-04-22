@@ -49,3 +49,7 @@ done
 # remove last 4 lines with awk
 
 sed -i -n -e :a -e '1,4!{P;N;D;};N;ba' file.txt
+
+# remove the first lines of multiple bed files while concatenating them
+
+tail -n 2 file.bed file2.bed file3.bed > out.bed
