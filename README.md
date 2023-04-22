@@ -50,6 +50,7 @@ done
 
 sed -i -n -e :a -e '1,4!{P;N;D;};N;ba' file.txt
 
-# remove the first lines of multiple bed files while concatenating them
+# remove the first lines of multiple bed files while concatenating them and printing 2,3,4 column
 
 tail -n 2 file.bed file2.bed file3.bed > out.bed
+awk '{print $2"\t"$3"\t"$4}'
